@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> grid layout 1</title>
+    <style>
+        body{
+            display: grid;
+            border: 2px,solid red;
+            grid-template-areas:
+            'header header header'
+            'nav article article'
+            'ads article article'
+            'footer footer footer';
+            grid-template-columns: 100px 1fr 50px;
+            grid-template-rows: 70px 1fr 1fr 70px;
+            height: 100vh;
+            gap: 2px;
+            
+        }
+        #pageheader{
+            grid-area: header;
+        }
+        #maincontact{
+            grid-area: article;
+        }
+        #navbar{
+            grid-area: nav;
+        }
+        #siteads{
+            grid-area: ads;
+        }
+        #pagefooter{
+            grid-area: footer;
+        }
+        header,article,nav,div,footer{
+            border: 1px solid rgb(255, 0, 0);
+            background-color: palevioletred;
+            color: rgb(0, 255, 42);
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="pageheader">HEADER</header>
+    <article id="maincontact">MAIN CONTACT</article>
+    <nav id="navbar=">NAV</nav>
+    <div id="siteads">ADS</div>
+    <footer id="pagefooter">FOOTER</footer>
+   
+</body>
+</html>
